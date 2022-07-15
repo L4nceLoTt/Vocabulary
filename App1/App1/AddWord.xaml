@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.AddWord">
+    
+    <StackLayout BackgroundColor="White">
+        <StackLayout Padding="0, 50, 0, 0">
+            <Image Source="kanji.png" WidthRequest="200" HeightRequest="200"/>
+        </StackLayout>
+        <StackLayout Padding="60" Spacing="20">
+            <Frame BorderColor="LightGray" CornerRadius="10" HeightRequest="50" WidthRequest="225">
+                <Entry x:Name="japEntry" ClearButtonVisibility="WhileEditing" HorizontalTextAlignment="Center" TextColor="Black" Placeholder="Слово" PlaceholderColor="LightGray"></Entry>
+            </Frame>
+            <Frame BorderColor="LightGray" CornerRadius="10" HeightRequest="50" WidthRequest="225">
+                <Entry x:Name="transEntry" ClearButtonVisibility="WhileEditing" HorizontalTextAlignment="Center" TextColor="Black" Placeholder="Транскрипция" PlaceholderColor="LightGray"></Entry>
+            </Frame>
+            <Frame BorderColor="LightGray" CornerRadius="10" HeightRequest="50" WidthRequest="225">
+                <Entry x:Name="rusEntry" ClearButtonVisibility="WhileEditing" HorizontalTextAlignment="Center" TextColor="Black" Placeholder="Перевод" PlaceholderColor="LightGray"></Entry>
+            </Frame>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="EndAndExpand" Padding="0, 0, 0, 30" Spacing="50">
+            <ImageButton Source="x.png"
+                         WidthRequest="75"
+                         HeightRequest="75"
+                         BackgroundColor="White"
+                         CornerRadius="10"
+                         x:Name="x">
+
+            </ImageButton>
+            <ImageButton Source="v.png"
+                         WidthRequest="75"
+                         HeightRequest="75"
+                         BackgroundColor="White"
+                         CornerRadius="10"
+                         x:Name="v">
+            </ImageButton>
+
+        </StackLayout>
+    </StackLayout>
+    
+</ContentPage>

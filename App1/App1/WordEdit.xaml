@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.WordEdit">
+
+
+    <StackLayout BackgroundColor="White">
+        <StackLayout Padding="50">
+            <Label x:Name="_jap" TextColor="Black" HorizontalOptions="Center" FontSize="80" HorizontalTextAlignment="Center"></Label>
+            <Label x:Name="_trans" TextColor="DarkGray" HorizontalOptions="Center" FontSize="Large" ></Label>
+        </StackLayout>
+        <StackLayout Padding="60" Spacing="20">
+            <Frame BorderColor="LightGray" CornerRadius="10" HeightRequest="50" WidthRequest="225">
+                <Entry x:Name="japEntry" ClearButtonVisibility="WhileEditing" HorizontalTextAlignment="Center" TextColor="Black" Placeholder="Слово"></Entry>
+            </Frame>
+            <Frame BorderColor="LightGray" CornerRadius="10" HeightRequest="50" WidthRequest="225">
+                <Entry x:Name="transEntry" ClearButtonVisibility="WhileEditing" HorizontalTextAlignment="Center" TextColor="Black" Placeholder="Транскрипция"></Entry>
+            </Frame>
+            <Frame BorderColor="LightGray" CornerRadius="10" HeightRequest="50" WidthRequest="225">
+                <Entry x:Name="rusEntry" ClearButtonVisibility="WhileEditing" HorizontalTextAlignment="Center" TextColor="Black" Placeholder="Перевод"></Entry>
+            </Frame>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="EndAndExpand" Padding="0, 0, 0, 30" Spacing="50">
+            <ImageButton Source="x.png"
+                         WidthRequest="75"
+                         HeightRequest="75"
+                         BackgroundColor="White"
+                         CornerRadius="10"
+                         x:Name="x">
+                
+            </ImageButton>
+            <ImageButton Source="trash.png"
+                         WidthRequest="75"
+                         HeightRequest="75"
+                         BackgroundColor="White"
+                         CornerRadius="10"
+                         x:Name="t">
+                
+            </ImageButton>
+            <ImageButton Source="v.png"
+                         WidthRequest="75"
+                         HeightRequest="75"
+                         BackgroundColor="White"
+                         CornerRadius="10"
+                         x:Name="v">
+            </ImageButton>
+            
+        </StackLayout>
+    </StackLayout>
+    
+    
+</ContentPage>

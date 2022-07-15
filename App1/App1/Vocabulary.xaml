@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Vocabulary">
+
+    <StackLayout BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+        
+        <CollectionView ItemsSource="{Binding voc}"
+                        SelectionMode="Single"
+                        SelectionChanged="CollectionView_SelectionChanged"
+                        Margin="5, 5, 5, 5"
+                        x:Name="Collection">
+            
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="3">
+                    
+                </GridItemsLayout>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="LightGray" BackgroundColor="Transparent" CornerRadius="10">
+                        <Grid RowDefinitions="Auto, *"
+                          ColumnDefinitions="Auto, *"
+                              IsVisible="{Binding voc}">
+                            
+                            <Label Grid.Row="0"
+                               Grid.Column="0"
+                               Text="{Binding jap}"
+                               TextColor="Black"
+                               FontSize="30">
+                            </Label>
+
+                            <Label Grid.Row="1"
+                               Grid.Column="0"
+                               Text="{Binding trans}"
+                               VerticalTextAlignment="Center"
+                               HorizontalTextAlignment="Center"
+                               TextColor="DarkGray">
+                            </Label>
+
+                            <Label Grid.RowSpan="2"
+                               Grid.Column="1"
+                               Text="{Binding rus}"
+                               TextColor="Black"
+                               VerticalTextAlignment="Center"
+                               HorizontalTextAlignment="Center"
+                               VerticalOptions="CenterAndExpand"
+                               HorizontalOptions="CenterAndExpand">
+                            </Label>
+
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+    </StackLayout>
+</ContentPage>
