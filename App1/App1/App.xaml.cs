@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -7,16 +9,137 @@ namespace App1
 {
     public partial class App : Application
     {
-        IList<Word> Vocab { get; set; }
+        public ObservableCollection<Word> Vocab { get; set; }
+
         public App()
         {
             InitializeComponent();
         }
 
-        protected override void OnStart()
+        protected override async void OnStart()
         {
-            Vocab = new List<Word>();
+            Vocab = new ObservableCollection<Word>();
 
+            Vocab.Add(new Word()
+            {
+                jap = "あいう",
+                rus = "adfg",
+                trans = "aiu"
+            });
+            Vocab.Add(new Word()
+            {
+                jap = "あいう",
+                rus = "adfg",
+                trans = "aiu"
+            });
+            Vocab.Add(new Word()
+            {
+                jap = "あいう",
+                rus = "adfg",
+                trans = "aiu"
+            });
+            Vocab.Add(new Word()
+            {
+                jap = "あいう",
+                rus = "adfg",
+                trans = "aiu"
+            });
+            Vocab.Add(new Word()
+            {
+                jap = "あいう",
+                rus = "adfg",
+                trans = "aiu"
+            });
+            Vocab.Add(new Word()
+            {
+                jap = "あいう",
+                rus = "adfg",
+                trans = "aiu"
+            });
+            Vocab.Add(new Word()
+            {
+                jap = "あいう",
+                rus = "adfg",
+                trans = "aiu"
+            });
+            Vocab.Add(new Word()
+            {
+                jap = "あいう",
+                rus = "adfg",
+                trans = "aiu"
+            });
+            Vocab.Add(new Word()
+            {
+                jap = "あいう",
+                rus = "adfg",
+                trans = "aiu"
+            });
+            Vocab.Add(new Word()
+            {
+                jap = "あいう",
+                rus = "adfg",
+                trans = "aiu"
+            });
+            Vocab.Add(new Word()
+            {
+                jap = "あいう",
+                rus = "adfg",
+                trans = "aiu"
+            });
+            Vocab.Add(new Word()
+            {
+                jap = "あいう",
+                rus = "adfg",
+                trans = "aiu"
+            });
+            Vocab.Add(new Word()
+            {
+                jap = "あいう",
+                rus = "adfg",
+                trans = "aiu"
+            });
+            Vocab.Add(new Word()
+            {
+                jap = "あいう",
+                rus = "adfg",
+                trans = "aiu"
+            });
+            Vocab.Add(new Word()
+            {
+                jap = "あいう",
+                rus = "adfg",
+                trans = "aiu"
+            });
+            Vocab.Add(new Word()
+            {
+                jap = "あいう",
+                rus = "adfg",
+                trans = "aiu"
+            });
+            Vocab.Add(new Word()
+            {
+                jap = "あいう",
+                rus = "adfg",
+                trans = "aiu"
+            });
+            Vocab.Add(new Word()
+            {
+                jap = "あいう",
+                rus = "adfg",
+                trans = "aiu"
+            });
+            Vocab.Add(new Word()
+            {
+                jap = "あいう",
+                rus = "adfg",
+                trans = "aiu"
+            });
+            Vocab.Add(new Word()
+            {
+                jap = "あいう",
+                rus = "adfg",
+                trans = "aiu"
+            });
             Vocab.Add(new Word()
             {
                 jap = "あいう",

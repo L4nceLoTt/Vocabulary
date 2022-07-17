@@ -14,9 +14,6 @@
         <StackLayout VerticalOptions="StartAndExpand" Spacing="10" Margin="50, 0, 50, 50">
 
             <Frame Padding="0.4" CornerRadius="10" BorderColor="LightGray">
-                <Button x:Name="add" Text="Добавить слово" BackgroundColor="White" TextColor="Black" CornerRadius="10"></Button>
-            </Frame>
-            <Frame Padding="0.4" CornerRadius="10" BorderColor="LightGray">
                 <Button x:Name="voc" Text="Словарь" BackgroundColor="White" TextColor="Black" CornerRadius="10"></Button>
             </Frame>
             <Frame Padding="0.4" CornerRadius="10" BorderColor="LightGray">

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -12,7 +13,7 @@ namespace App1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddWord : ContentPage
     {
-        public IList<Word> WordList { get; set; }
+        public ObservableCollection<Word> WordList { get; set; }
         public AddWord()
         {
             InitializeComponent();

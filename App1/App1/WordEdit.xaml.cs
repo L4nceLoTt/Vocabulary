@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,56 +13,37 @@ namespace App1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WordEdit : ContentPage
     {
-
-        public Word selectd { get; set; }
-        public IList<Word> voc { get; set; } 
-
-        Word backup = new Word();
+        public ObservableCollection<Word> Voc { get; set; }
+        public Word SelectedWord { get; set; }
         public WordEdit()
         {
             InitializeComponent();
             x.Clicked += X_Clicked;
-            v.Clicked += V_Clicked;
             t.Clicked += T_Clicked;
-        }
-
-        async void T_Clicked(object sender, EventArgs e)
-        {
-            voc.Remove(selectd);
-
-            await Navigation.PopModalAsync();
+            v.Clicked += V_Clicked;
         }
 
         protected override void OnAppearing()
         {
-            backup.jap = selectd.jap;
-            backup.trans = selectd.trans;
-            backup.rus = selectd.rus;
-
-            _jap.Text = backup.jap;
-            _trans.Text = backup.trans;
-
-            japEntry.Text = backup.jap;
-            transEntry.Text = backup.trans;
-            rusEntry.Text = backup.rus;
+            _jap.Text = SelectedWord.jap;
+            _trans.Text = SelectedWord.trans;
         }
 
-        async void V_Clicked(object sender, EventArgs e)
+        private async void V_Clicked(object sender, EventArgs e)
         {
-            selectd.jap = japEntry.Text;
-            selectd.rus = rusEntry.Text;
-            selectd.trans = transEntry.Text;
+            SelectedWord = new Word() { jap = japEntry.Text, rus = rusEntry.Text, trans = transEntry.Text };
             await Navigation.PopModalAsync();
         }
 
-        async void X_Clicked(object sender, EventArgs e)
+        private async void T_Clicked(object sender, EventArgs e)
         {
+            Voc.Remove(SelectedWord);
             await Navigation.PopModalAsync();
         }
 
-        //protected override void OnDisappearing()
-        //{
-        //    Navigation.PopAsync();
-        //}
+        private async void X_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
+        }
     }
 }
