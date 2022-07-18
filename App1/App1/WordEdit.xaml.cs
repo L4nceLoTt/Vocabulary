@@ -13,7 +13,6 @@ namespace App1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WordEdit : ContentPage
     {
-        public ObservableCollection<Word> Voc { get; set; }
         public Word SelectedWord { get; set; }
         public WordEdit()
         {
@@ -27,17 +26,20 @@ namespace App1
         {
             _jap.Text = SelectedWord.jap;
             _trans.Text = SelectedWord.trans;
+            japEntry.Text = SelectedWord.jap;
+            rusEntry.Text = SelectedWord.rus;
+            transEntry.Text = SelectedWord.trans;
         }
 
         private async void V_Clicked(object sender, EventArgs e)
         {
-            SelectedWord = new Word() { jap = japEntry.Text, rus = rusEntry.Text, trans = transEntry.Text };
+            App.Update(SelectedWord, new Word() { jap = japEntry.Text, rus = rusEntry.Text, trans = transEntry.Text });
             await Navigation.PopModalAsync();
         }
 
         private async void T_Clicked(object sender, EventArgs e)
         {
-            Voc.Remove(SelectedWord);
+            App.Vocab.Remove(SelectedWord);
             await Navigation.PopModalAsync();
         }
 

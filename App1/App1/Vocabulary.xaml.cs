@@ -13,32 +13,46 @@ namespace App1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Vocabulary : ContentPage
     {
-        public ObservableCollection<Word> voc { get; set; }
         Word selectedWord;
-        
+
         public Vocabulary()
         {
             InitializeComponent();
 
-            
+            collection.EmptyView = new StackLayout()
+            {
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                Children =
+                {
+                    new Label()
+                    {
+                        Text = "Словарь пуст",
+                        TextColor = Color.DarkGray,
+                        FontSize = 40,
+                        VerticalOptions = LayoutOptions.CenterAndExpand,
+                        HorizontalOptions = LayoutOptions.CenterAndExpand
+                    }
+                }
+            };
             Add.Clicked += Add_Clicked;
         }
 
         private async void Add_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new AddWord() { WordList = voc });
+            await Navigation.PushModalAsync(new AddWord());
         }
 
         protected override async void OnAppearing()
-        { 
-            this.BindingContext = this;
+        {
+            collection.ItemsSource = App.Vocab;
         }
 
 
         async void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             selectedWord = e.CurrentSelection[0] as Word;
-            await Navigation.PushModalAsync(new WordEdit() { Voc = voc, SelectedWord = selectedWord });
+            await Navigation.PushModalAsync(new WordEdit() { SelectedWord = selectedWord });
         }
     }
 }

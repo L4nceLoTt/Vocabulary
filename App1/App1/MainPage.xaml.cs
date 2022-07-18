@@ -11,8 +11,6 @@ namespace App1
 {
     public partial class MainPage : ContentPage
     {
-        public ObservableCollection<Word> vocab;
-
         public MainPage()
         {
             InitializeComponent();
@@ -27,7 +25,7 @@ namespace App1
 
         async void Voc_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new Vocabulary() { voc = vocab });
+            await Navigation.PushModalAsync(new Vocabulary());
         }
     }
 }

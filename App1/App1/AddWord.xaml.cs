@@ -13,7 +13,6 @@ namespace App1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddWord : ContentPage
     {
-        public ObservableCollection<Word> WordList { get; set; }
         public AddWord()
         {
             InitializeComponent();
@@ -28,7 +27,7 @@ namespace App1
 
         async void V_Clicked(object sender, EventArgs e)
         {
-            WordList.Add(new Word() { jap = japEntry.Text, rus = rusEntry.Text, trans = transEntry.Text });
+            App.Update(null, new Word() { jap = japEntry.Text, rus = rusEntry.Text, trans = transEntry.Text });
             await Navigation.PopModalAsync(); 
         }
     }
