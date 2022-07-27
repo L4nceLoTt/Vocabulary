@@ -43,7 +43,7 @@ namespace App1
             await Navigation.PushModalAsync(new AddWord());
         }
 
-        protected override async void OnAppearing()
+        protected override void OnAppearing()
         {
             collection.ItemsSource = App.Vocab;
         }

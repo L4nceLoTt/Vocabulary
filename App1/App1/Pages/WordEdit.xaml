@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.WordEdit">
+
+    <StackLayout BackgroundColor="White">
+        <StackLayout Padding="50">
+            <Label x:Name="_jap" 
+                   Text="{Binding Source={x:Reference japEntry}, Path=Text}"
+                   TextColor="Black" 
+                   HorizontalOptions="Center"
+                   FontSize="40"
+                   HorizontalTextAlignment="Center"></Label>
+            <Label x:Name="_trans"
+                   Text="{Binding Source={x:Reference transEntry}, Path=Text}"
+                   TextColor="DarkGray"
+                   HorizontalOptions="Center"
+                   FontSize="Large"
+                   HorizontalTextAlignment="Center"></Label>
+        </StackLayout>
+        <StackLayout Padding="60" Spacing="20">
+            <Frame BorderColor="LightGray"
+                   CornerRadius="10"
+                   Padding="0">
+                <Entry x:Name="japEntry"
+                       HeightRequest="50"
+                       WidthRequest="225"
+                       TextColor="Black"
+                       Placeholder="Слово"
+                       PlaceholderColor="LightGray"
+                       HorizontalTextAlignment="Center"/>
+            </Frame>
+            <Frame BorderColor="LightGray"
+                   CornerRadius="10"
+                   Padding="0">
+                <Entry x:Name="transEntry"
+                       HeightRequest="50"
+                       WidthRequest="225"
+                       TextColor="Black"
+                       Placeholder="Транскрипция"
+                       PlaceholderColor="LightGray"
+                       HorizontalTextAlignment="Center"/>
+            </Frame>
+            <Frame BorderColor="LightGray"
+                   CornerRadius="10"
+                   Padding="0">
+                <Entry x:Name="rusEntry"
+                       HeightRequest="50"
+                       WidthRequest="225"
+                       TextColor="Black"
+                       Placeholder="Перевод"
+                       PlaceholderColor="LightGray"
+                       HorizontalTextAlignment="Center"/>
+            </Frame>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center"
+                     VerticalOptions="EndAndExpand"
+                     Padding="0, 0, 0, 30"
+                     Spacing="50">
+            <Frame BackgroundColor="#1976D2"
+                   Padding="0"
+                   CornerRadius="15">
+                <ImageButton Source="trash1.png"
+                             x:Name="t"
+                             BackgroundColor="Transparent"
+                             WidthRequest="75"
+                             HeightRequest="75"/>
+            </Frame>
+            <Frame BackgroundColor="#1976D2"
+                   Padding="0"
+                   CornerRadius="15">
+                <ImageButton Source="v1.png"
+                             x:Name="v"
+                             BackgroundColor="Transparent"
+                             WidthRequest="75"
+                             HeightRequest="75"/>
+            </Frame>
+            
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -10,9 +10,7 @@
                         x:Name="collection">
             
             <CollectionView.ItemsLayout>
-                <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="3">
-                    
-                </GridItemsLayout>
+                <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="3"/>
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
@@ -52,7 +50,7 @@
 
         </CollectionView>
         <Frame Padding="0" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.93, 0.96, 60, 60" CornerRadius="15">
-            <ImageButton Source="add.png" BackgroundColor="White" x:Name="Add"/>
+            <ImageButton Source="add1.png" BackgroundColor="#1976D2" x:Name="Add"/>
         </Frame>
     </AbsoluteLayout>
 </ContentPage>

@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Pages.Katakana"
+             BackgroundColor="White">
+
+    <StackLayout Padding="0, 5, 0, 5" Spacing="6">
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+            <CheckBox Scale="1.4"
+                      x:Name="k_a"/>
+            <Frame Padding="0" 
+                   WidthRequest="300"
+                   HeightRequest="50"
+                   CornerRadius="20"
+                   HasShadow="False"
+                   BorderColor="#1976D2">
+                <Label Text="ア    イ    ウ    エ    オ"
+                       TextColor="Black"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Scale="2"/>
+            </Frame>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+            <CheckBox Scale="1.4"
+                      x:Name="k_ka"/>
+            <Frame Padding="0" 
+                   WidthRequest="300"
+                   HeightRequest="50"
+                   CornerRadius="20"
+                   HasShadow="False"
+                   BorderColor="#1976D2">
+                <Label Text="カ    キ    ク    ケ    コ"
+                       TextColor="Black"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Scale="2"/>
+            </Frame>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+            <CheckBox Scale="1.4"
+                      x:Name="k_sa"/>
+            <Frame Padding="0" 
+                   WidthRequest="300"
+                   HeightRequest="50"
+                   CornerRadius="20"
+                   HasShadow="False"
+                   BorderColor="#1976D2">
+                <Label Text="サ    シ    ス    セ    ソ"
+                       TextColor="Black"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Scale="2"/>
+            </Frame>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+            <CheckBox Scale="1.4"
+                      x:Name="k_ta"/>
+            <Frame Padding="0" 
+                   WidthRequest="300"
+                   HeightRequest="50"
+                   CornerRadius="20"
+                   HasShadow="False"
+                   BorderColor="#1976D2">
+                <Label Text="タ    チ    ツ    テ    ト"
+                       TextColor="Black"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Scale="2"/>
+            </Frame>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+            <CheckBox Scale="1.4"
+                      x:Name="k_na"/>
+            <Frame Padding="0" 
+                   WidthRequest="300"
+                   HeightRequest="50"
+                   CornerRadius="20"
+                   HasShadow="False"
+                   BorderColor="#1976D2">
+                <Label Text="ナ    ニ    ヌ    ネ    ノ"
+                       TextColor="Black"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Scale="2"/>
+            </Frame>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+            <CheckBox Scale="1.4"
+                      x:Name="k_ha"/>
+            <Frame Padding="0" 
+                   WidthRequest="300"
+                   HeightRequest="50"
+                   CornerRadius="20"
+                   HasShadow="False"
+                   BorderColor="#1976D2">
+                <Label Text="ハ    ヒ    フ    ヘ    ホ"
+                       TextColor="Black"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Scale="2"/>
+            </Frame>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+            <CheckBox Scale="1.4"
+                      x:Name="k_ma"/>
+            <Frame Padding="0" 
+                   WidthRequest="300"
+                   HeightRequest="50"
+                   CornerRadius="20"
+                   HasShadow="False"
+                   BorderColor="#1976D2">
+                <Label Text="マ    ミ    ム    メ    モ"
+                       TextColor="Black"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Scale="2"/>
+            </Frame>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+            <CheckBox Scale="1.4"
+                      x:Name="k_ra"/>
+            <Frame Padding="0" 
+                   WidthRequest="300"
+                   HeightRequest="50"
+                   CornerRadius="20"
+                   HasShadow="False"
+                   BorderColor="#1976D2">
+                <Label Text="ラ    リ    ル    レ    ロ"
+                       TextColor="Black"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Scale="2"/>
+            </Frame>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+            <CheckBox Scale="1.4"
+                      x:Name="k_yawan"/>
+            <Frame Padding="0" 
+                   WidthRequest="300"
+                   HeightRequest="50"
+                   CornerRadius="20"
+                   HasShadow="False"
+                   BorderColor="#1976D2">
+                <Label Text="ヤ   ユ   ヨ   ワ   ヲ   ン"
+                       TextColor="Black"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Scale="2"/>
+            </Frame>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+            <CheckBox Scale="1.4"
+                      x:Name="k_ga"/>
+            <Frame Padding="0" 
+                   WidthRequest="300"
+                   HeightRequest="50"
+                   CornerRadius="20"
+                   HasShadow="False"
+                   BorderColor="#1976D2">
+                <Label Text="   カ゛キ゛ク゛ケ゛コ゛"
+                       TextColor="Black"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Scale="2"/>
+            </Frame>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+            <CheckBox Scale="1.4"
+                      x:Name="k_za"/>
+            <Frame Padding="0" 
+                   WidthRequest="300"
+                   HeightRequest="50"
+                   CornerRadius="20"
+                   HasShadow="False"
+                   BorderColor="#1976D2">
+                <Label Text="    サ゛シ゛ス゛セ゛ソ゛"
+                       TextColor="Black"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Scale="2"/>
+            </Frame>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+            <CheckBox Scale="1.4"
+                      x:Name="k_da"/>
+            <Frame Padding="0" 
+                   WidthRequest="300"
+                   HeightRequest="50"
+                   CornerRadius="20"
+                   HasShadow="False"
+                   BorderColor="#1976D2">
+                <Label Text="    タ゛チ゛ツ゛テ゛ト゛"
+                       TextColor="Black"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Scale="2"/>
+            </Frame>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+            <CheckBox Scale="1.4"
+                      x:Name="k_ba"/>
+            <Frame Padding="0" 
+                   WidthRequest="300"
+                   HeightRequest="50"
+                   CornerRadius="20"
+                   HasShadow="False"
+                   BorderColor="#1976D2">
+                <Label Text="    ハ゛ヒ゛フ゛ヘ゛ホ゛"
+                       TextColor="Black"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Scale="2"/>
+            </Frame>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+            <CheckBox Scale="1.4"
+                      x:Name="k_pa"/>
+            <Frame Padding="0" 
+                   WidthRequest="300"
+                   HeightRequest="50"
+                   CornerRadius="20"
+                   HasShadow="False"
+                   BorderColor="#1976D2">
+                <Label Text="    ハ゜ヒ゜フ゜ヘ゜ホ゜"
+                       TextColor="Black"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Scale="2"/>
+            </Frame>
+        </StackLayout>
+        <ImageButton Source="v1"
+                     HeightRequest="50"
+                     BackgroundColor="#1976D2"
+                     Margin="70,0,70,0"
+                     CornerRadius="10"
+                     x:Name="acceptk"/>
+    </StackLayout>
+
+</ContentPage>

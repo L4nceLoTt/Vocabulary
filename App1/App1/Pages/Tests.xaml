@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Tests"
+             BackgroundColor="White">
+
+        
+    <StackLayout Spacing="70">
+        <StackLayout Padding="30, 70, 30, 30">
+            <Image Source="vocab.png"/>
+        </StackLayout>
+        <StackLayout Padding="50, 0, 50, 0" Spacing="10">
+            <Frame CornerRadius="10" Padding="0">
+                <Button x:Name="rus_jap" Text="Русский - Японский" BackgroundColor="White" TextColor="Black"/>
+            </Frame>
+            <Frame CornerRadius="10" Padding="0">
+                <Button x:Name="jap_rus" Text="Японский - Русский" BackgroundColor="White" TextColor="Black"/>
+            </Frame>
+            <Frame CornerRadius="10" Padding="0">
+                <Button x:Name="hira" Text="Хирагана" BackgroundColor="White" TextColor="Black"/>
+            </Frame>
+            <Frame CornerRadius="10" Padding="0">
+                <Button x:Name="kata" Text="Катакана" BackgroundColor="White" TextColor="Black"/>
+            </Frame>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

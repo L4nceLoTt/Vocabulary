@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Pages.TestPage">
+
+    <AbsoluteLayout BackgroundColor="White">
+        <Frame CornerRadius="10" 
+               BackgroundColor="LimeGreen"
+               AbsoluteLayout.LayoutFlags="PositionProportional"
+               AbsoluteLayout.LayoutBounds="0.05, 0.02"
+               Padding="0">
+            <Label WidthRequest="100"
+                   HeightRequest="60"
+                   x:Name="corr" 
+                   Text="1"
+                   TextColor="White" 
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="25"/>
+        </Frame>
+        <Frame CornerRadius="10"
+               BackgroundColor="White"
+               AbsoluteLayout.LayoutFlags="PositionProportional"
+               AbsoluteLayout.LayoutBounds="0.5, 0.02"
+               Padding="0">
+            <Label WidthRequest="100"
+                   HeightRequest="60" 
+                   x:Name="percent" 
+                   Text="100%"
+                   TextColor="Black" 
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center"
+                   FontSize="25"/>
+        </Frame>
+        <Frame CornerRadius="10" 
+               BackgroundColor="Red"
+               AbsoluteLayout.LayoutFlags="PositionProportional"
+               AbsoluteLayout.LayoutBounds="0.95, 0.02"
+               Padding="0">
+            <Label WidthRequest="100" 
+                   HeightRequest="60" 
+                   x:Name="incorr" 
+                   Text="1" 
+                   TextColor="White" 
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand" 
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="25"/>
+        </Frame>
+        <Label Text="WORD"
+               x:Name="word"
+               FontSize="60" 
+               TextColor="Black"
+               AbsoluteLayout.LayoutFlags="PositionProportional" 
+               AbsoluteLayout.LayoutBounds="0.5, 0.25"/>
+        <Frame WidthRequest="200" 
+               HeightRequest="75" 
+               AbsoluteLayout.LayoutFlags="PositionProportional" 
+               AbsoluteLayout.LayoutBounds="0.5, 0.6" 
+               CornerRadius="20">
+            <Entry Placeholder="Ответ"
+                   x:Name="answer"
+                   TextColor="Black"
+                   PlaceholderColor="LightGray" 
+                   HorizontalOptions="FillAndExpand" 
+                   VerticalOptions="FillAndExpand" 
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center"/>
+        </Frame>
+        <Frame WidthRequest="75" 
+               Padding="0" 
+               CornerRadius="10" 
+               BackgroundColor="#1976D2" 
+               AbsoluteLayout.LayoutFlags="PositionProportional" 
+               AbsoluteLayout.LayoutBounds="0.5, 0.9">
+            <ImageButton x:Name="check" 
+                         Source="v1" 
+                         VerticalOptions="FillAndExpand" 
+                         HorizontalOptions="FillAndExpand" 
+                         BackgroundColor="#1976D2"/>
+        </Frame>
+        
+    </AbsoluteLayout>
+</ContentPage>

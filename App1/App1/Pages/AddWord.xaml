@@ -19,21 +19,17 @@
             </Frame>
         </StackLayout>
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="EndAndExpand" Padding="0, 0, 0, 30" Spacing="50">
-            <ImageButton Source="x.png"
-                         WidthRequest="75"
-                         HeightRequest="75"
-                         BackgroundColor="White"
-                         CornerRadius="10"
-                         x:Name="x">
-
+            <Frame Padding="0"
+                   BackgroundColor="#1976D2"
+                   CornerRadius="15">
+                <ImageButton Source="v1.png"
+                             WidthRequest="75"
+                             HeightRequest="75"
+                             BackgroundColor="Transparent"
+                             x:Name="v">
             </ImageButton>
-            <ImageButton Source="v.png"
-                         WidthRequest="75"
-                         HeightRequest="75"
-                         BackgroundColor="White"
-                         CornerRadius="10"
-                         x:Name="v">
-            </ImageButton>
+            </Frame>
+            
 
         </StackLayout>
     </StackLayout>

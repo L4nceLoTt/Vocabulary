@@ -17,17 +17,12 @@ namespace App1
         {
             InitializeComponent();
             v.Clicked += V_Clicked;
-            x.Clicked += X_Clicked;
-        }
-
-        async void X_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PopModalAsync();
         }
 
         async void V_Clicked(object sender, EventArgs e)
         {
             App.Update(null, new Word() { jap = japEntry.Text, rus = rusEntry.Text, trans = transEntry.Text });
+            App.SaveOrLoad(true);
             await Navigation.PopModalAsync(); 
         }
     }
