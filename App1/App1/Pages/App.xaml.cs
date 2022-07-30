@@ -66,6 +66,7 @@ namespace App1
         public static bool _done { get; set; }
         public static Test test;
         private static int counter;
+
         public App()
         {
             InitializeComponent();
@@ -77,7 +78,7 @@ namespace App1
         {
             SaveOrLoad(false);
             MainPage = new NavigationPage(new MainPage());
-            //MainPage = new CustomAlert("test", "test", "ok");
+            //MainPage = new TestPage();
         }
 
         public static void SaveOrLoad(bool choice)
@@ -120,7 +121,6 @@ namespace App1
                 Vocab[index] = _new;
             }
         }
-
         void HiraKataLoad()
         {
             Dict.Add("h_a", new ObservableCollection<Word>(new List<Word>{ new Word { jap = "あ", rus = "a", trans = "" },

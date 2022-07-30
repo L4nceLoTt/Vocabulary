@@ -1,82 +1,96 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App1.WordEdit">
+             x:Class="App1.WordEdit"
+             Visual="Material">
 
-    <StackLayout BackgroundColor="White">
-        <StackLayout Padding="50">
-            <Label x:Name="_jap" 
+    <ContentPage.Content>
+
+        <StackLayout BackgroundColor="White">
+            <StackLayout Padding="50"
+                     VerticalOptions="EndAndExpand">
+                <Label x:Name="_jap" 
                    Text="{Binding Source={x:Reference japEntry}, Path=Text}"
                    TextColor="Black" 
                    HorizontalOptions="Center"
                    FontSize="40"
                    HorizontalTextAlignment="Center"></Label>
-            <Label x:Name="_trans"
+                <Label x:Name="_trans"
                    Text="{Binding Source={x:Reference transEntry}, Path=Text}"
                    TextColor="DarkGray"
                    HorizontalOptions="Center"
                    FontSize="Large"
                    HorizontalTextAlignment="Center"></Label>
-        </StackLayout>
-        <StackLayout Padding="60" Spacing="20">
-            <Frame BorderColor="LightGray"
+            </StackLayout>
+            <StackLayout Padding="60" Spacing="20">
+                <Frame Padding="0"
                    CornerRadius="10"
-                   Padding="0">
-                <Entry x:Name="japEntry"
-                       HeightRequest="50"
+                   BackgroundColor="#1976D2">
+                    <Entry x:Name="japEntry"
+                       HeightRequest="57"
                        WidthRequest="225"
-                       TextColor="Black"
+                       TextColor="White"
                        Placeholder="Слово"
                        PlaceholderColor="LightGray"
+                       BackgroundColor="#1976D2"
                        HorizontalTextAlignment="Center"/>
-            </Frame>
-            <Frame BorderColor="LightGray"
+                </Frame>
+
+                <Frame Padding="0"
                    CornerRadius="10"
-                   Padding="0">
-                <Entry x:Name="transEntry"
-                       HeightRequest="50"
+                   BackgroundColor="#1976D2">
+                    <Entry x:Name="transEntry"
+                       HeightRequest="57"
                        WidthRequest="225"
-                       TextColor="Black"
+                       TextColor="White"
                        Placeholder="Транскрипция"
                        PlaceholderColor="LightGray"
+                       BackgroundColor="#1976D2"
                        HorizontalTextAlignment="Center"/>
-            </Frame>
-            <Frame BorderColor="LightGray"
+                </Frame>
+
+                <Frame Padding="0"
                    CornerRadius="10"
-                   Padding="0">
-                <Entry x:Name="rusEntry"
-                       HeightRequest="50"
+                   BackgroundColor="#1976D2">
+                    <Entry x:Name="rusEntry"
+                       HeightRequest="57"
                        WidthRequest="225"
-                       TextColor="Black"
+                       TextColor="White"
                        Placeholder="Перевод"
                        PlaceholderColor="LightGray"
+                       BackgroundColor="#1976D2"
                        HorizontalTextAlignment="Center"/>
-            </Frame>
-        </StackLayout>
-        <StackLayout Orientation="Horizontal"
+                </Frame>
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
                      HorizontalOptions="Center"
                      VerticalOptions="EndAndExpand"
                      Padding="0, 0, 0, 30"
                      Spacing="50">
-            <Frame BackgroundColor="#1976D2"
+                <Frame BackgroundColor="#1976D2"
                    Padding="0"
                    CornerRadius="15">
-                <ImageButton Source="trash1.png"
+                    <ImageButton Source="trash1.png"
                              x:Name="t"
                              BackgroundColor="Transparent"
                              WidthRequest="75"
                              HeightRequest="75"/>
-            </Frame>
-            <Frame BackgroundColor="#1976D2"
+                </Frame>
+                <Frame BackgroundColor="#1976D2"
                    Padding="0"
                    CornerRadius="15">
-                <ImageButton Source="v1.png"
+                    <ImageButton Source="v1.png"
                              x:Name="v"
                              BackgroundColor="Transparent"
                              WidthRequest="75"
                              HeightRequest="75"/>
-            </Frame>
-            
+                </Frame>
+
+            </StackLayout>
         </StackLayout>
-    </StackLayout>
+
+    </ContentPage.Content>
+    
+    
 </ContentPage>

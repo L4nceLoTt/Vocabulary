@@ -4,24 +4,88 @@
              x:Class="App1.Tests"
              BackgroundColor="White">
 
-        
-    <StackLayout Spacing="70">
-        <StackLayout Padding="30, 70, 30, 30">
-            <Image Source="vocab.png"/>
-        </StackLayout>
-        <StackLayout Padding="50, 0, 50, 0" Spacing="10">
-            <Frame CornerRadius="10" Padding="0">
-                <Button x:Name="rus_jap" Text="Русский - Японский" BackgroundColor="White" TextColor="Black"/>
-            </Frame>
-            <Frame CornerRadius="10" Padding="0">
-                <Button x:Name="jap_rus" Text="Японский - Русский" BackgroundColor="White" TextColor="Black"/>
-            </Frame>
-            <Frame CornerRadius="10" Padding="0">
-                <Button x:Name="hira" Text="Хирагана" BackgroundColor="White" TextColor="Black"/>
-            </Frame>
-            <Frame CornerRadius="10" Padding="0">
-                <Button x:Name="kata" Text="Катакана" BackgroundColor="White" TextColor="Black"/>
-            </Frame>
-        </StackLayout>
-    </StackLayout>
+    <ContentPage.Content>
+
+        <AbsoluteLayout BackgroundColor="White"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand">
+
+            <StackLayout Padding="0"
+                     AbsoluteLayout.LayoutFlags="PositionProportional"
+                     AbsoluteLayout.LayoutBounds="0.5, 0.2"
+                     WidthRequest="400"
+                     HeightRequest="400">
+
+                <Image Source="vocab.png"
+                   HeightRequest="300"
+                   WidthRequest="300"/>
+
+            </StackLayout>
+
+            <StackLayout AbsoluteLayout.LayoutFlags="PositionProportional" 
+                     AbsoluteLayout.LayoutBounds="0.5, 0.8" 
+                     WidthRequest="400">
+
+                <Frame CornerRadius="15"
+                   Padding="0"
+                   HorizontalOptions="CenterAndExpand"
+                   BackgroundColor="#1976D2"
+                   WidthRequest="200"
+                   HeightRequest="45">
+
+                    <Button x:Name="rus_jap" 
+                        Text="Русский - Японский"
+                        BackgroundColor="#1976D2"
+                        TextColor="White"
+                        CornerRadius="10"/>
+                </Frame>
+
+                <Frame CornerRadius="15" 
+                   Padding="0"
+                   HorizontalOptions="CenterAndExpand"
+                   BackgroundColor="#1976D2"
+                   WidthRequest="200"
+                   HeightRequest="45">
+
+                    <Button x:Name="jap_rus" 
+                        Text="Японский - Русский"
+                        BackgroundColor="#1976D2"
+                        TextColor="White"
+                        CornerRadius="10"/>
+                </Frame>
+
+                <Frame CornerRadius="15"
+                   Padding="0"
+                   HorizontalOptions="CenterAndExpand"
+                   BackgroundColor="#1976D2"
+                   WidthRequest="200"
+                   HeightRequest="45">
+
+                    <Button x:Name="hira"
+                        Text="Хирагана" 
+                        BackgroundColor="#1976D2"
+                        TextColor="White"
+                        CornerRadius="10"/>
+                </Frame>
+
+                <Frame CornerRadius="15" 
+                   Padding="0"
+                   HorizontalOptions="CenterAndExpand"
+                   BackgroundColor="#1976D2"
+                   WidthRequest="200"
+                   HeightRequest="45">
+
+                    <Button x:Name="kata" 
+                        Text="Катакана"
+                        BackgroundColor="#1976D2"
+                        TextColor="White"
+                        CornerRadius="10"/>
+                </Frame>
+
+            </StackLayout>
+
+        </AbsoluteLayout>
+
+    </ContentPage.Content>
+
 </ContentPage>

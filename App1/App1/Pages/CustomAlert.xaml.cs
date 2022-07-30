@@ -20,6 +20,7 @@ namespace App1.Pages
             CancelButton.Text = cancelButton;
             CancelButton.Clicked += CancelButton_Clicked;
             this.Content.Scale = 0;
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         private void CancelButton_Clicked(object sender, EventArgs e)

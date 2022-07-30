@@ -1,39 +1,78 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App1.MainPage">
+             x:Class="App1.MainPage"
+             Visual="Material">
 
-    <AbsoluteLayout BackgroundColor="White" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+    <ContentPage.Content>
 
-        <StackLayout VerticalOptions="EndAndExpand" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 0.2">
-            <Image Source="book.png" HeightRequest="300" WidthRequest="300"></Image>
-            <Label Text="辞書" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="36"></Label>
-        </StackLayout>
+        <AbsoluteLayout BackgroundColor="White"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand">
+
+            <StackLayout AbsoluteLayout.LayoutFlags="PositionProportional"
+                         AbsoluteLayout.LayoutBounds="0.5, 0.2"
+                         Padding="0"
+                         HeightRequest="400"
+                         WidthRequest="400">
+
+                <Image Source="book.png"
+                       HeightRequest="300"
+                       WidthRequest="300"/>
+
+                <Frame Padding="0"
+                       HorizontalOptions="Center"
+                       HasShadow="False"
+                       CornerRadius="30"
+                       BackgroundColor="White">
+                    <Button Text="辞書"
+                            TextColor="Black"
+                            TextTransform="None"
+                            BackgroundColor="White"
+                            FontSize="36"
+                            Clicked="Button_Clicked"/>
+                </Frame>
+                
+
+            </StackLayout>
 
 
-        <StackLayout VerticalOptions="StartAndExpand" Spacing="10" Margin="50, 0, 50, 50" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 0.85" WidthRequest="200">
+            <StackLayout AbsoluteLayout.LayoutFlags="PositionProportional" 
+                     AbsoluteLayout.LayoutBounds="0.5, 0.8" 
+                     WidthRequest="400">
 
-            <Frame Padding="0.4" CornerRadius="10" BorderColor="LightGray">
-                <Button x:Name="voc" Text="Словарь" BackgroundColor="White" TextColor="Black" CornerRadius="10"></Button>
-            </Frame>
-            <Frame Padding="0.4" CornerRadius="10" BorderColor="LightGray">
-                <Button x:Name="tests" Text="Тесты" BackgroundColor="White" TextColor="Black" CornerRadius="10"></Button> 
-            </Frame>
-            
+                <Frame Padding="0"
+                   CornerRadius="10"
+                   HorizontalOptions="CenterAndExpand"
+                   BackgroundColor="#1976D2"
+                   WidthRequest="200"
+                   HeightRequest="45">
 
-        </StackLayout>
+                    <Button x:Name="voc" 
+                        Text="Словарь" 
+                        BackgroundColor="#1976D2"
+                        TextColor="White"
+                        CornerRadius="10"/>
+                </Frame>
 
+                <Frame Padding="0.4"
+                   CornerRadius="10"
+                   HorizontalOptions="CenterAndExpand"
+                   BackgroundColor="#1976D2"
+                   WidthRequest="200"
+                   HeightRequest="45">
 
-        <AbsoluteLayout x:Name="settings" Padding="0" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0, 0.5">
-            <Frame  WidthRequest="250" HeightRequest="730" CornerRadius="20" BorderColor="LightGray">
+                    <Button x:Name="tests"
+                        Text="Тесты"
+                        BackgroundColor="#1976D2"
+                        TextColor="White"
+                        CornerRadius="10"/>
+                </Frame>
 
-            </Frame>
-            <Label TextColor="Black" Text="{Binding Source={x:Reference slider}, Path=Value}" HorizontalTextAlignment="Center" FontSize="Large" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.25, 0.5"/>
-            <Slider x:Name="slider" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.8, 0.5" MinimumTrackColor="Black" MaximumTrackColor="Black" WidthRequest="170" Minimum="0" Maximum="10"></Slider>
+            </StackLayout>
+
         </AbsoluteLayout>
         
-        <ImageButton Source="sett" x:Name="sett" BackgroundColor="White" CornerRadius="30" HeightRequest="50" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.85, 0.02"/>
-
-    </AbsoluteLayout>
-
+    </ContentPage.Content>
+    
 </ContentPage>

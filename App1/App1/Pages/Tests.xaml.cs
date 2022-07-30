@@ -20,7 +20,6 @@ namespace App1
             jap_rus.Clicked += Jap_rus_Clicked;
             hira.Clicked += Hira_Clicked;
             kata.Clicked += Kata_Clicked;
-
             if (App.Vocab.Count == 0)
             {
                 rus_jap.BackgroundColor = Color.LightGray;

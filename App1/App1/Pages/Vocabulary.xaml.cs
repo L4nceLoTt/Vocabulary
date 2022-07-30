@@ -18,7 +18,6 @@ namespace App1
         public Vocabulary()
         {
             InitializeComponent();
-
             collection.EmptyView = new StackLayout()
             {
                 HorizontalOptions = LayoutOptions.FillAndExpand,
@@ -36,6 +35,7 @@ namespace App1
                 }
             };
             Add.Clicked += Add_Clicked;
+
         }
 
         private async void Add_Clicked(object sender, EventArgs e)
@@ -53,6 +53,11 @@ namespace App1
         {
             selectedWord = e.CurrentSelection[0] as Word;
             await Navigation.PushModalAsync(new WordEdit() { SelectedWord = selectedWord });
+        }
+
+        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            collection.ItemsSource = App.Vocab.Where(x => x.jap.ToLower().Contains((sender as SearchBar).Text.ToLower()) || x.rus.ToLower().Contains((sender as SearchBar).Text.ToLower()));
         }
     }
 }

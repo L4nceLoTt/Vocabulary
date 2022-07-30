@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using App1.Pages;
 
 namespace App1
 {
@@ -17,13 +18,21 @@ namespace App1
         {
             InitializeComponent();
             v.Clicked += V_Clicked;
+            japEntry.Text = rusEntry.Text = transEntry.Text = "";
         }
 
         async void V_Clicked(object sender, EventArgs e)
         {
-            App.Update(null, new Word() { jap = japEntry.Text, rus = rusEntry.Text, trans = transEntry.Text });
-            App.SaveOrLoad(true);
-            await Navigation.PopModalAsync(); 
+            if (japEntry.Text == "" || rusEntry.Text == "" || transEntry.Text == "")
+            {
+                await Navigation.PushModalAsync(new CustomAlert("Внимание", "Заполните все поля!", "Понял"), false);
+            }
+            else
+            {
+                App.Update(null, new Word() { jap = japEntry.Text, rus = rusEntry.Text, trans = transEntry.Text });
+                App.SaveOrLoad(true);
+                await Navigation.PopModalAsync(); 
+            }
         }
     }
 }

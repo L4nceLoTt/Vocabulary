@@ -24,6 +24,7 @@ namespace App1.Pages
             incorr.Text = App.test.incorrect.ToString();
             percent.Text = App.test.GetCorrectsPercentage();
             answer.Text = "";
+            NavigationPage.SetIconColor(this, Color.Aqua);
         }
 
         private async void Check_Clicked(object sender, EventArgs e)
