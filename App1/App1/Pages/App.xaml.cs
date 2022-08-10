@@ -5,6 +5,9 @@ using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App1.Pages;
+using System.Linq;
+using Xamarin.CommunityToolkit.ObjectModel;
+using Java.Util;
 
 namespace App1
 {
@@ -26,7 +29,6 @@ namespace App1
                 Vocabulary = value;
             }
         }
-
 
         static Dictionary<string, ObservableCollection<Word>> _Dictionary;
         public static Dictionary<string, ObservableCollection<Word>> Dict
@@ -78,7 +80,7 @@ namespace App1
         {
             SaveOrLoad(false);
             MainPage = new NavigationPage(new MainPage());
-            //MainPage = new TestPage();
+            //MainPage = new Vocabulary();
         }
 
         public static void SaveOrLoad(bool choice)
@@ -91,6 +93,7 @@ namespace App1
                     Application.Current.Properties["jap" + i.ToString()] = Vocab[i].jap;
                     Application.Current.Properties["rus" + i.ToString()] = Vocab[i].rus;
                     Application.Current.Properties["trans" + i.ToString()] = Vocab[i].trans;
+                    Application.Current.Properties["tag" + i.ToString()] = Vocab[i].tag;
                 }
                 Application.Current.SavePropertiesAsync();
             }
@@ -103,11 +106,27 @@ namespace App1
 
                     for(int i = 0; i < counter; i++)
                     {
-                        Word tmpW = new Word() { jap = Application.Current.Properties["jap" + i.ToString()].ToString(), trans = Application.Current.Properties["trans" + i.ToString()].ToString(), rus = Application.Current.Properties["rus" + i.ToString()].ToString() };
+                        Word tmpW = new Word() { jap = Application.Current.Properties["jap" + i.ToString()].ToString(), 
+                            trans = Application.Current.Properties["trans" + i.ToString()].ToString(), 
+                            rus = Application.Current.Properties["rus" + i.ToString()].ToString(), 
+                            tag = Application.Current.Properties["tag" + i.ToString()].ToString()
+                        };
                         Vocab.Add(tmpW);
                     }
                 }
             }
+        }
+        public static string[] GetTags()
+        {
+            List<string> tags = new List<string>();
+            foreach(var item in Vocab)
+            {
+                if (!tags.Contains(item.tag)) tags.Add(item.tag);
+            }
+
+            tags.Sort();
+
+            return tags.ToArray();
         }
         public static void Update(Word _old, Word _new)
         {

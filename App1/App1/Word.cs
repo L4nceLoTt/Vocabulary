@@ -10,6 +10,6 @@ namespace App1
         public string rus { get; set; }
         public string jap { get; set; }    
         public string trans { get; set; }
-
+        public string tag { get; set; }
     }
 }

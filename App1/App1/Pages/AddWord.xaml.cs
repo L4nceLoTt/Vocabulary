@@ -18,18 +18,29 @@ namespace App1
         {
             InitializeComponent();
             v.Clicked += V_Clicked;
-            japEntry.Text = rusEntry.Text = transEntry.Text = "";
+            chooseTag.Clicked += ChooseTag_Clicked;
+            japEntry.Text = rusEntry.Text = transEntry.Text = tagEntry.Text = "";
+        }
+
+        private async void ChooseTag_Clicked(object sender, EventArgs e)
+        {
+            string[] tags = App.GetTags();
+            if (tags.Length != 0)
+            {
+                string result = await DisplayActionSheet(null, null, null, tags);
+                tagEntry.Text = result;
+            }
         }
 
         async void V_Clicked(object sender, EventArgs e)
         {
-            if (japEntry.Text == "" || rusEntry.Text == "" || transEntry.Text == "")
+            if (japEntry.Text == "" || rusEntry.Text == "" || transEntry.Text == "" || tagEntry.Text == "")
             {
                 await Navigation.PushModalAsync(new CustomAlert("Внимание", "Заполните все поля!", "Понял"), false);
             }
             else
             {
-                App.Update(null, new Word() { jap = japEntry.Text, rus = rusEntry.Text, trans = transEntry.Text });
+                App.Update(null, new Word() { jap = japEntry.Text, rus = rusEntry.Text, trans = transEntry.Text, tag = tagEntry.Text });
                 App.SaveOrLoad(true);
                 await Navigation.PopModalAsync(); 
             }

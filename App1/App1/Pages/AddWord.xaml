@@ -52,6 +52,35 @@
                        BackgroundColor="#1976D2"
                        HorizontalTextAlignment="Center"></Entry>
                 </Frame>
+
+                <StackLayout Orientation="Horizontal"
+                             WidthRequest="225"
+                             Padding="0">
+                    <Frame Padding="0"
+                           CornerRadius="10"
+                           BackgroundColor="#1976D2"
+                           HorizontalOptions="FillAndExpand">
+                        <Entry x:Name="tagEntry"
+                               HeightRequest="57"
+                               TextColor="White"
+                               Placeholder="Тэг"
+                               PlaceholderColor="LightGray"
+                               BackgroundColor="#1976D2"
+                               HorizontalTextAlignment="Center"/>
+                    </Frame>
+                    <Frame Padding="0"
+                           CornerRadius="10"
+                           BackgroundColor="#1976D2"
+                           HorizontalOptions="End">
+                        <Button WidthRequest="57"
+                                HeightRequest="57"
+                                BackgroundColor="#1976D2"
+                                Text="..."
+                                FontSize="20"
+                                x:Name="chooseTag"/>
+                    </Frame>
+                </StackLayout>
+
             </StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="EndAndExpand" Padding="0, 0, 0, 30" Spacing="50">
                 <Frame Padding="0"

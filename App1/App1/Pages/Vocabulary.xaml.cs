@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Android.Widget;
+using Xamarin.CommunityToolkit.ObjectModel;
 
 namespace App1
 {
@@ -14,7 +16,6 @@ namespace App1
     public partial class Vocabulary : ContentPage
     {
         Word selectedWord;
-
         public Vocabulary()
         {
             InitializeComponent();
@@ -45,7 +46,7 @@ namespace App1
 
         protected override void OnAppearing()
         {
-            collection.ItemsSource = App.Vocab;
+            collection.ItemsSource = App.Vocab.GroupBy(x => x.tag).OrderBy(x => x.Key);
         }
 
 
@@ -57,7 +58,9 @@ namespace App1
 
         private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
         {
-            collection.ItemsSource = App.Vocab.Where(x => x.jap.ToLower().Contains((sender as SearchBar).Text.ToLower()) || x.rus.ToLower().Contains((sender as SearchBar).Text.ToLower()));
+            collection.ItemsSource = App.Vocab.Where(x => x.jap.ToLower().Contains((sender as SearchBar).Text.ToLower()) ||
+                                                            x.rus.ToLower().Contains((sender as SearchBar).Text.ToLower()) ||
+                                                            x.tag.ToLower().Contains((sender as SearchBar).Text.ToLower())).GroupBy(x => x.tag).OrderBy(x => x.Key);
         }
     }
 }

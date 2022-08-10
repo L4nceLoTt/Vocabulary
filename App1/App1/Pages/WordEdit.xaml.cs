@@ -1,4 +1,5 @@
-﻿using App1.Pages;
+﻿using Android.Widget;
+using App1.Pages;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -19,24 +20,36 @@ namespace App1
             InitializeComponent();
             t.Clicked += T_Clicked;
             v.Clicked += V_Clicked;
+            chooseTag.Clicked += ChooseTag_Clicked;
         }
 
-        protected override async void OnAppearing()
+        private async void ChooseTag_Clicked(object sender, EventArgs e)
+        {
+            string[] tags = App.GetTags();
+            if (tags.Length != 0)
+            {
+                string result = await DisplayActionSheet(null, null, null, tags);
+                tagEntry.Text = result;
+            }
+        }
+
+        protected override void OnAppearing()
         {
             japEntry.Text = SelectedWord.jap;
             rusEntry.Text = SelectedWord.rus;
             transEntry.Text = SelectedWord.trans;
+            tagEntry.Text = SelectedWord.tag;
         }
 
         private async void V_Clicked(object sender, EventArgs e)
         {
-            if (japEntry.Text == "" || rusEntry.Text == "" || transEntry.Text == "")
+            if (japEntry.Text == "" || rusEntry.Text == "" || transEntry.Text == "" || tagEntry.Text == "")
             {
                 await Navigation.PushModalAsync(new CustomAlert("Внимание", "Заполните все поля!", "Понял"), false);
             }
             else
             {
-                App.Update(SelectedWord, new Word() { jap = japEntry.Text, rus = rusEntry.Text, trans = transEntry.Text });
+                App.Update(SelectedWord, new Word() { jap = japEntry.Text, rus = rusEntry.Text, trans = transEntry.Text, tag = tagEntry.Text });
                 App.SaveOrLoad(true);
                 await Navigation.PopModalAsync();
             }
@@ -51,7 +64,7 @@ namespace App1
 
         protected override bool OnBackButtonPressed()
         {
-            App.Update(SelectedWord, new Word() { jap = SelectedWord.jap, rus = SelectedWord.rus, trans = SelectedWord.trans });
+            App.Update(SelectedWord, new Word() { jap = SelectedWord.jap, rus = SelectedWord.rus, trans = SelectedWord.trans, tag = SelectedWord.tag });
             App.SaveOrLoad(true);
             return base.OnBackButtonPressed();
         }
